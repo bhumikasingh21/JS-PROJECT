@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.color {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border-style: dashed;
+  display: inline-block;
+  background-color: antiquewhite;
+
+}
+#red1{
+    background-color: red;
+    cursor: pointer;
+}
+#green1{
+    background-color:green;
+    cursor: pointer;
+}
+#yellow1{
+    background-color: yellow;
+    cursor: pointer;
+}
+#blue1{
+    background-color: blue;
+    cursor: pointer;
+}
+</style>
+</head>
+<body id="body">
+
+<div style="text-align: center">
+  <h1>Circle Scheme Switcher</h1>
+  <span class="color red1" id="red1">red</span>
+  <span class="color" id="green1">green</span>
+  <span class="color" id="yellow1">yellow</span>
+  <span class="color" id="blue1">blue</span>
+</div>
+  <script>
+    // const red1= document.getElementById("red1");
+    // const body= document.getElementById("body");
+    red1.addEventListener("click",()=>{
+      body.style.backgroundColor = "red";
+    })
+    green1.addEventListener("click",()=>{
+      body.style.backgroundColor = "green";
+    })
+    yellow1.addEventListener("click",()=>{
+      body.style.backgroundColor = "yellow";
+    })
+    blue1.addEventListener("click",()=>{
+      body.style.backgroundColor = "blue";
+    })
+    
+  </script>
+
+</body>
+</html>

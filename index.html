@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title style="color: blueviolet">color</title>
+    <style>
+    #btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: mediumseagreen;
+        height: 100vh;
+    }
+    </style>
+</head>
+<body id="body">
+    <div id="btn"><button>CLICK ME :)</button></div>
+    <script>
+    const color1 = [
+        "red",
+        "green",
+        "blue",
+        "black",
+        "yellow",
+        "wheat",
+        "mediumseagreen",
+        "seagreen",
+];
+console.log(color1.length);
+const btn = document.getElementById("btn");
+const body = document.getElementById("body");
+btn.addEventListener("click", function () {
+        const data = Math.floor(Math.random() * color1.length + 1);
+        console.log(data);
+        body.style.backgroundColor = color1[data];
+});
+
+    </script>
+</body>
+</html>
