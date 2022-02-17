@@ -1,0 +1,58 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QUOTES</title>
+    <style>
+      #btn {
+        margin-top: 10px;
+        border: none;
+        background-color: black;
+        color: white;
+        padding: 10px;
+        outline: none;
+        border-radius: 5px;
+      }
+      #text1 {
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        font-size: large;
+        font-style: italic;
+        background-color: aliceblue;
+        color: black;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="text1"></div>
+    <div ><button id="btn">CLICK ME ✨</button></div>
+
+    <script>
+      quotes = [
+        "Be yourself; everyone else is already taken.",
+        "Without music, life would be a mistake.",
+        "Be the change that you wish to see in the world.",
+        "Fairy tales are more than true: not because they tell us that dragons exist, but because they tell us that dragons can be beaten.",
+        "I have not failed. I've just found 10,000 ways that won't work.",
+        "You've gotta dance like there's nobody watching,Love like you'll never be hurt,Sing like there's nobody listening,And live like it's heaven on earth.",
+        "The opposite of love is not hate, it's indifference. The opposite of art is not ugliness, it's indifference. The opposite of faith is not heresy, it's indifference. And the opposite of life is not death, it's indifference.",
+        "I am enough of an artist to draw freely upon my imagination. Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.",
+        "You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose. You're on your own. And you know what you know. And YOU are the one who'll decide where to go...",
+        "It is never too late to be what you might have been.",
+      ];
+
+      const btn = document.getElementById("btn");
+
+      btn.addEventListener("click", () => {
+        const data = Math.floor(Math.random() * quotes.length + 1);
+        const text1 = document.getElementById("text1");
+        console.log(quotes[data]);
+        text1.innerText = quotes[data];
+        console.log(quotes.length);
+      });
+    </script>
+  </body>
+</html>
