@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Login Form</h2>
+    <form class="container my-5">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          <span id="emailText"></span>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password">
+          <span id="passwordText"></span>
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-success" id="btn">Submit</button>
+      </form>
+
+      <script>
+      const email = document.getElementById("email");
+      const password = document.getElementById("password");
+      const btn = document.getElementById("btn");
+      const emailText = document.getElementById("emailText");
+      const passwordText = document.getElementById("passwordText");
+
+      const emailValue = localStorage.getItem("email");
+      const passwordValue = localStorage.getItem("password");
+
+      btn.addEventListener("click", (event) => {
+          event.preventDefault();
+          console.log("Clicked");
+
+          console.log(email.value);
+          console.log(password.value);
+
+          if(email.value == "" || email.value !== emailValue){
+              emailText.innerHTML = "Please Enter Email";
+              emailText.style.border = "1px solid red";
+              emailText.style.marginTop = "20px";
+              emailText.style.padding = "5px";
+          }if(password.value == "" || password.value !== passwordValue){
+              passwordText.innerHTML = "Please Enter Password";
+              passwordText.style.border = "1px solid red";
+              passwordText.style.marginTop = "20px";
+              passwordText.style.padding = "5px";
+          }else{
+              alert("Succesfully Login");
+              console.log(emailValue);
+              console.log(passwordValue);
+              location.assign("https://www.w3schools.com/");
+          }
+      });
+      </script>
+</body>
+</html>
